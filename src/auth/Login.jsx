@@ -6,7 +6,6 @@ import images from "../assets/images/images";
 
 const Login = () => {
   const [password, setPassword] = useState("");
-  const [showPassword, setShowPassword] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
 
@@ -44,7 +43,7 @@ const Login = () => {
                   </h2>
                   <input type="text" placeholder="Enter admin username" />
                   <input
-                    type={showPassword ? "text" : "password"}
+                    type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     placeholder="Password to access: admin"
