@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "vite",
     "predeploy": "npm run build",
-    "deploy": "npx gh-pages -d dist -u https://github.com/Naeem2664/DecimaSol-Landing-Page",
+    "deploy": "npx gh-pages -d dist",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
