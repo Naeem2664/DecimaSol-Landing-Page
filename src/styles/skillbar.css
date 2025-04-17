@@ -1,0 +1,32 @@
+  .skill-container{
+    font-family: 'Quicksand', sans-serif;
+  }
+  .skill-label {
+    font-size: 1rem;
+    font-weight: 6400;
+    margin-bottom: 6px;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 25px;
+    padding: 2px;
+    border: 3px solid #c8190c;
+    border-radius: 20px;
+    background-color: transparent;
+    overflow: hidden;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #c8190c;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 12px;
+    font-weight: small;
+    transition: width 0.5s ease-in-out;
+  }
+  

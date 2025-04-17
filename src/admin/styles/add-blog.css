@@ -1,0 +1,10 @@
+.add-blog-page{
+    font-family: 'QuickSand',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.delete-btn{
+    width:150px;
+}

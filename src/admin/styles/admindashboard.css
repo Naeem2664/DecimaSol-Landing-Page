@@ -1,0 +1,11 @@
+.active{
+    background-color: red;
+    color: aliceblue;
+}
+.admin{
+    font-family: 'Quicksand', sans-serif;
+
+}
+.admin a{
+    padding: 10px;
+}
