@@ -9,12 +9,51 @@ import Footer from "../layout/Footer";
 import "../App.css";
 const Page = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [activeSection,setActiveSection] = React.useState("home");
   console.log(import.meta.env.VITE_REACT_APP_LOGIN_PASSWORD);
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const blogRef = useRef(null);
   const testimonialsRef = useRef(null);
   const contactRef = useRef(null);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 200;
+  
+      if (
+        scrollPosition >= homeRef.current?.offsetTop &&
+        scrollPosition < aboutRef.current?.offsetTop
+      ) {
+        setActiveSection("home");
+      } else if (
+        scrollPosition >= aboutRef.current?.offsetTop &&
+        scrollPosition < blogRef.current?.offsetTop
+      ) {
+        setActiveSection("about");
+      } else if (
+        scrollPosition >= blogRef.current?.offsetTop &&
+        scrollPosition < testimonialsRef.current?.offsetTop
+      ) {
+        setActiveSection("blog");
+      } else if (
+        scrollPosition >= testimonialsRef.current?.offsetTop &&
+        scrollPosition < contactRef.current?.offsetTop
+      ) {
+        setActiveSection("testimonials");
+      } else if (
+        scrollPosition >= contactRef.current?.offsetTop
+      ) {
+        setActiveSection("contact");
+      }
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  
 
   return (
     <>
@@ -46,67 +85,62 @@ const Page = () => {
                     }`}
                   >
                     <ul className="navbar-nav ms-md-auto me-md-auto align-items-center">
-                      <li className="nav-item active">
+                      <li className="nav-item">
                         <button
                           type="button"
-                          className="nav-link btn btn-link"
-                          onClick={() =>
-                            homeRef.current?.scrollIntoView({
-                              behavior: "smooth",
-                            })
-                          }
+                          className={`nav-link btn btn-link ${activeSection === "home" ? "active" : ""}`}
+                          onClick={() =>{homeRef.current?.scrollIntoView({behavior: "smooth",block: "start"});
+                            setActiveSection("home")
+                            setMenuOpen(false);
+                          }}
                         >
                           Home
                         </button>
                       </li>
                       <li className="nav-item">
-                        <button
+                      <button
                           type="button"
-                          className="nav-link btn btn-link"
-                          onClick={() =>
-                            aboutRef.current?.scrollIntoView({
-                              behavior: "smooth",
-                            })
-                          }
+                          className={`nav-link btn btn-link ${activeSection === "about" ? "active" : ""}`}
+                          onClick={() =>{homeRef.current?.scrollIntoView({behavior: "smooth",block: "start"});
+                            setActiveSection("about")
+                            setMenuOpen(false);
+                          }}
                         >
                           About
                         </button>
                       </li>
                       <li className="nav-item">
-                        <button
+                      <button
                           type="button"
-                          className="nav-link btn btn-link"
-                          onClick={() =>
-                            blogRef.current?.scrollIntoView({
-                              behavior: "smooth",
-                            })
-                          }
+                          className={`nav-link btn btn-link ${activeSection === "blog" ? "active" : ""}`}
+                          onClick={() =>{homeRef.current?.scrollIntoView({behavior: "smooth",block: "start"});
+                            setActiveSection("blog")
+                            setMenuOpen(false);
+                          }}
                         >
                           Blog
                         </button>
                       </li>
                       <li className="nav-item">
-                        <button
+                      <button
                           type="button"
-                          className="nav-link btn btn-link"
-                          onClick={() =>
-                            testimonialsRef.current?.scrollIntoView({
-                              behavior: "smooth",
-                            })
-                          }
+                          className={`nav-link btn btn-link ${activeSection === "testimonials" ? "active" : ""}`}
+                          onClick={() =>{homeRef.current?.scrollIntoView({behavior: "smooth",block: "start"});
+                            setActiveSection("testimonials")
+                            setMenuOpen(false);
+                          }}
                         >
                           Testimonials
                         </button>
                       </li>
                       <li className="nav-item">
-                        <button
+                      <button
                           type="button"
-                          className="nav-link btn btn-link"
-                          onClick={() =>
-                            contactRef.current?.scrollIntoView({
-                              behavior: "smooth",
-                            })
-                          }
+                          className={`nav-link btn btn-link ${activeSection === "contact" ? "active" : ""}`}
+                          onClick={() =>{homeRef.current?.scrollIntoView({behavior: "smooth",block: "start"});
+                            setActiveSection("contact")
+                            setMenuOpen(false);
+                          }}
                         >
                           Contact
                         </button>
