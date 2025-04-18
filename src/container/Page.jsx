@@ -79,19 +79,19 @@ const Page = () => {
             </div>
           </div>
         </div>
-        <div id="home">
+        <div ref={homeRef} id="home">
           <Home />
         </div>
-        <div id="about">
+        <div ref={aboutRef} id="about">
           <About />
         </div>
-        <div id="blogs">
+        <div ref={blogRef} id="blogs">
           <Blogs />
         </div>
-        <div id="testimonials">
+        <div ref={testimonialsRef} id="testimonials">
           <Testimonials />
         </div>
-        <div id="contact">
+        <div ref={contactRef} id="contact">
           <Contact />
         </div>
         <div id="footer">
