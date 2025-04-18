@@ -9,12 +9,12 @@ import Footer from "../layout/Footer";
 import "../App.css";
 const Page = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
-  console.log(import.meta.env.VITE_REACT_APP_LOGIN_PASSWORD)
-  const homeRef=useRef(null)
-  const aboutRef=useRef(null)
-  const blogRef=useRef(null)
-  const testimonialsRef=useRef(null)
-  const contactRef=useRef(null)
+  console.log(import.meta.env.VITE_REACT_APP_LOGIN_PASSWORD);
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const blogRef = useRef(null);
+  const testimonialsRef = useRef(null);
+  const contactRef = useRef(null);
 
   return (
     <>
@@ -47,28 +47,67 @@ const Page = () => {
                   >
                     <ul className="navbar-nav ms-md-auto me-md-auto align-items-center">
                       <li className="nav-item active">
-                        <button className="nav-link" onClick={()=>homeRef.current?.scrollIntoView({behavior:"smooth"})}>
+                        <button
+                          type="button"
+                          className="nav-link btn btn-link"
+                          onClick={() =>
+                            homeRef.current?.scrollIntoView({
+                              behavior: "smooth",
+                            })
+                          }
+                        >
                           Home
                         </button>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" onClick={()=>aboutRef.current?.scrollIntoView({behavior:"smooth"})}>
+                        <button
+                          type="button"
+                          className="nav-link btn btn-link"
+                          onClick={() =>
+                            aboutRef.current?.scrollIntoView({
+                              behavior: "smooth",
+                            })
+                          }
+                        >
                           About
-                        </a>
+                        </button>
                       </li>
-                      
                       <li className="nav-item">
-                        <button className="nav-link" onClick={()=>blogRef.current?.scrollIntoView({behavior:"smooth"})}>
+                        <button
+                          type="button"
+                          className="nav-link btn btn-link"
+                          onClick={() =>
+                            blogRef.current?.scrollIntoView({
+                              behavior: "smooth",
+                            })
+                          }
+                        >
                           Blog
                         </button>
                       </li>
                       <li className="nav-item">
-                        <button className="nav-link" onClick={()=>testimonialsRef.current?.scrollIntoView({behavior:"smooth"})}>
+                        <button
+                          type="button"
+                          className="nav-link btn btn-link"
+                          onClick={() =>
+                            testimonialsRef.current?.scrollIntoView({
+                              behavior: "smooth",
+                            })
+                          }
+                        >
                           Testimonials
                         </button>
                       </li>
                       <li className="nav-item">
-                        <button className="nav-link" onClick={()=>contactRef.current?.scrollIntoView({behavior:"smooth"})}>
+                        <button
+                          type="button"
+                          className="nav-link btn btn-link"
+                          onClick={() =>
+                            contactRef.current?.scrollIntoView({
+                              behavior: "smooth",
+                            })
+                          }
+                        >
                           Contact
                         </button>
                       </li>
@@ -95,8 +134,7 @@ const Page = () => {
           <Contact />
         </div>
         <div id="footer">
-         
-         <Footer/>
+          <Footer />
         </div>
       </div>
     </>
