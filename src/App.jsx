@@ -11,7 +11,7 @@ const App = () => {
     <BrowserRouter basename="/DecimaSol-Landing-Page">
       <Routes>
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Page />} />
+        <Route path="/" index element={<Page />} />
         <Route
           path="/admin"
           element={
