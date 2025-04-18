@@ -47,30 +47,30 @@ const Page = () => {
                   >
                     <ul className="navbar-nav ms-md-auto me-md-auto align-items-center">
                       <li className="nav-item active">
-                        <a className="nav-link" onClick={()=>homeRef.current?.scrollIntoView({behavior:"smooth"})} href="#home">
+                        <button className="nav-link" onClick={()=>homeRef.current?.scrollIntoView({behavior:"smooth"})}>
                           Home
-                        </a>
+                        </button>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" onClick={()=>aboutRef.current?.scrollIntoView({behavior:"smooth"})} href="#about">
+                        <a className="nav-link" onClick={()=>aboutRef.current?.scrollIntoView({behavior:"smooth"})}>
                           About
                         </a>
                       </li>
                       
                       <li className="nav-item">
-                        <a className="nav-link" onClick={()=>blogRef.current?.scrollIntoView({behavior:"smooth"})} href="#blogs">
+                        <button className="nav-link" onClick={()=>blogRef.current?.scrollIntoView({behavior:"smooth"})}>
                           Blog
-                        </a>
+                        </button>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" onClick={()=>testimonialsRef.current?.scrollIntoView({behavior:"smooth"})} href="#testimonials">
+                        <button className="nav-link" onClick={()=>testimonialsRef.current?.scrollIntoView({behavior:"smooth"})}>
                           Testimonials
-                        </a>
+                        </button>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" onClick={()=>contactRef.current?.scrollIntoView({behavior:"smooth"})} href="#contact">
+                        <button className="nav-link" onClick={()=>contactRef.current?.scrollIntoView({behavior:"smooth"})}>
                           Contact
-                        </a>
+                        </button>
                       </li>
                     </ul>
                   </div>
