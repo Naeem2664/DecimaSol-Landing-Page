@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Home from "../pages/Home";
 import About from "../pages/About";
@@ -10,6 +10,11 @@ import "../App.css";
 const Page = () => {
   const [menuOpen, setMenuOpen] = React.useState(false);
   console.log(import.meta.env.VITE_REACT_APP_LOGIN_PASSWORD)
+  const homeRef=useRef(null)
+  const aboutRef=useRef(null)
+  const blogRef=useRef(null)
+  const testimonialsRef=useRef(null)
+  const contactRef=useRef(null)
 
   return (
     <>
@@ -42,28 +47,28 @@ const Page = () => {
                   >
                     <ul className="navbar-nav ms-md-auto me-md-auto align-items-center">
                       <li className="nav-item active">
-                        <a className="nav-link" href="#home">
+                        <a className="nav-link" onClick={()=>homeRef.current?.scrollIntoView({behavior:"smooth"})} href="#home">
                           Home
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#about">
+                        <a className="nav-link" onClick={()=>aboutRef.current?.scrollIntoView({behavior:"smooth"})} href="#about">
                           About
                         </a>
                       </li>
                       
                       <li className="nav-item">
-                        <a className="nav-link" href="#blogs">
+                        <a className="nav-link" onClick={()=>blogRef.current?.scrollIntoView({behavior:"smooth"})} href="#blogs">
                           Blog
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#testimonials">
+                        <a className="nav-link" onClick={()=>testimonialsRef.current?.scrollIntoView({behavior:"smooth"})} href="#testimonials">
                           Testimonials
                         </a>
                       </li>
                       <li className="nav-item">
-                        <a className="nav-link" href="#contact">
+                        <a className="nav-link" onClick={()=>contactRef.current?.scrollIntoView({behavior:"smooth"})} href="#contact">
                           Contact
                         </a>
                       </li>
