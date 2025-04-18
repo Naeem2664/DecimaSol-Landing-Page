@@ -42,7 +42,7 @@ const BlogCard = ({title,description,image,author}) => {
         }
         .blog-card-link {
           text-decoration: none;
-          color:#CB181D;
+          color:#ff6f61;
         }
       `}
       </style>
@@ -71,7 +71,7 @@ const BlogCard = ({title,description,image,author}) => {
         {`
           .blog-card-link {
             font-size: 1rem;
-            color: #CB181D';
+            color: #ff6f61;';
             text-decoration: none;
           }
           .blog-card-link:hover {
@@ -84,6 +84,8 @@ const BlogCard = ({title,description,image,author}) => {
           @media (max-width: 768px) {
             .blog-card {
               padding: 10px;
+              margin-top: 20px;
+              background-color: #f8f9fa;
             }
             .blog-card-title {
               font-size: 1.2rem;

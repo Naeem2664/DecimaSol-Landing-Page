@@ -1,11 +1,14 @@
 .active{
-    background-color: red;
+    background-color: #ff6f61;
     color: aliceblue;
 }
 .admin{
     font-family: 'Quicksand', sans-serif;
 
 }
-.admin a{
+.admin button{
     padding: 10px;
+}
+.admin li{
+    transition: all 0.4s ease;
 }

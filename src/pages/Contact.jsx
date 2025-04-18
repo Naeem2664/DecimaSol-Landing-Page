@@ -1,6 +1,5 @@
 import React from "react";
 import "../styles/contact.css";
-import { fontsColor } from "../assets/fonts/colors";
 const Contact = () => {
   return (
     <>
@@ -11,12 +10,11 @@ const Contact = () => {
               <h1
                 className="text-center"
                 style={{
-                  color: "#CB181D",
+                  color: "#ff6f61",
                   fontSize: "28px",
                   marginTop: "20px",
                   marginBottom: "9px",
-                }}
-              >
+                }}>
                 Contact
               </h1>
               <p className="text-center" style={{fontSize:'2.5rem',marginBottom:'30px'}}>Get in touch</p>
@@ -39,7 +37,6 @@ const Contact = () => {
             </div>
             <div className="col-md-5 contact-info">
               <div className="contact-form">
-                <h4 style={{color: fontsColor.red}}>Contact Me</h4>
                 <form>
                   <div className="form-group">
                     <label htmlFor="name">Name</label>

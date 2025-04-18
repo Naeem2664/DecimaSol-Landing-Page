@@ -1,12 +1,13 @@
 import React from "react";
 import images from '../assets/images/images'
+import '../styles/about-profile-card.css'
 const ProfileCard = () => {
   return (
-    <div className="position-relative mx-auto" style={{ width: "300px", height: "400px" }}>
+    <div className="position-relative mx-auto main-container" style={{ width: "300px", height: "400px" }}>
       <div
-        className="position-absolute border border-4 border-danger"
+        className="position-absolute border border-4 border-dark rounded"
         style={{
-            borderRadius:'10px',
+          borderRadius:'10px',
           top: "20px",
           left: "20px",
           width: "100%",
@@ -18,7 +19,7 @@ const ProfileCard = () => {
       <img
         src={images.Profile}
         alt="Profile"
-        className="position-absolute img-fluid rounded"
+        className="position-absolute img-fluid rounded profile-img"
         style={{
           top: 0,
           left: 0,

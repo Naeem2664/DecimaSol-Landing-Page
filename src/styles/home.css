@@ -10,7 +10,7 @@
     padding: 150px auto;
     text-align: center;
     background: 
-    linear-gradient(rgba(0, 0, 0, 0.622), rgba(101, 35, 35, 0.5)), 
+    linear-gradient(rgba(0, 0, 0, 0.691), rgba(101, 35, 35, 0)), 
     url('https://images.unsplash.com/photo-1548092372-0d1bd40894a3?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') 
     no-repeat center center fixed;    
     background-size: cover;
@@ -53,7 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #f6c6c6;
+    color: #ff6f61;
   }
   
   
@@ -90,16 +90,26 @@
     width: 500px;
     font-size: smaller;
 }
-.button{
-    padding: "10px 20px" !important;
-    width: "150px" !important;
-    background-color: "#1A1919" !important;
-    color: "#fff" !important;
-    border: "1px solid #fff" !important;
-    border-radius: "5px" !important;
-    margin-right: "10px" !important;
-    
+
+.social-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
-.button:hover{
-    background-color: #cb181e;
+
+.social-links a{
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    margin: 10px;
+    font-weight: bold;
+}
+.social-links a:hover{
+  transition: all 0.2s ease;
+    color: #ff6f74;
 }

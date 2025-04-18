@@ -15,7 +15,7 @@ const Blog = () => {
             <h1
               className="text-center"
               style={{
-                color: "#CB181D",
+                color: "#ff6f61",
                 fontSize: "28px",
                 marginTop: "20px",
                 marginBottom: "9px",

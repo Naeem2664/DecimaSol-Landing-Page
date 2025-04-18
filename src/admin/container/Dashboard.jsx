@@ -2,19 +2,18 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import '../styles/admindashboard.css'
+import "../styles/admindashboard.css";
 import images from "../../assets/images/images";
 import BlogPage from "../pages/BlogPage";
 
 const AdminDashboard = () => {
   const [activeTab, setActiveTab] = useState("dashboard");
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   const logOut = () => {
     localStorage.removeItem("isLoggedIn");
-    alert("You have been Logged Out!")
+    alert("You have been Logged Out!");
     navigate("/login");
-
   };
   const renderContent = () => {
     switch (activeTab) {
@@ -22,10 +21,10 @@ const AdminDashboard = () => {
         return <h2>Welcome to the Dashboard</h2>;
       case "about":
         return <h2>User Management</h2>;
-      case "skilla":
+      case "skills":
         return <h2>Order List</h2>;
       case "blogs":
-        return <BlogPage/>;
+        return <BlogPage />;
       case "settings":
         return <h2>Settings</h2>;
       default:
@@ -47,71 +46,81 @@ const AdminDashboard = () => {
         </a>
         <hr />
         <ul className="nav nav-pills flex-column mb-auto h-100 w-100">
-          <li className="nav-item">
-            <a
-              href="#dashboard"
-              className={`nav-link ${activeTab === "dashboard" ? "active" : "text-dark"}`}
+          <li className="nav-item" style={{padding: activeTab==="dashboard"?"10px":"0px",}}>
+            <button
+              className={`nav-link w-100 text-start btn ${
+                activeTab === "dashboard" ? "active" : "text-dark"
+              }`}
               onClick={() => setActiveTab("dashboard")}
               style={{
-                backgroundColor: activeTab === "dashboard" ? "red" : "transparent",
+                backgroundColor:
+                  activeTab === "dashboard" ? "#ff6f61" : "transparent",
                 color: activeTab === "dashboard" ? "#fff" : "#000",
               }}
             >
-              <i className="fas fa-tachometer-alt me-2"></i> Dashboard
-            </a>
+              <i className="fa-solid fa-blog"></i> Dashboard
+            </button>
           </li>
-          <li>
-            <a
-              href="#about"
-              className={`nav-link ${activeTab === "about" ? "active" : "text-dark"}`}
+          <li style={{padding: activeTab==="about"?"10px":"0px"}}>
+            <button
+              className={`nav-link w-100 text-start btn ${
+                activeTab === "about" ? "active" : "text-dark"
+              }`}
               onClick={() => setActiveTab("about")}
               style={{
-                backgroundColor: activeTab === "about" ? "red" : "transparent",
+                width: "100%",
+                backgroundColor:
+                  activeTab === "about" ? "#ff6f61" : "transparent",
                 color: activeTab === "about" ? "#fff" : "#000",
               }}
-              
             >
-              <i class="fa-solid fa-address-card"></i> About Info
-            </a>
+              <i className="fa-solid fa-blog"></i> About
+            </button>
           </li>
-          <li>
-            <a
-              href="#skills"
-              className={`nav-link ${activeTab === "skills" ? "active" : "text-dark"}`}
+          <li style={{padding: activeTab==="skills"?"10px":"0px"}}>
+            <button
+              className={`nav-link w-100 text-start btn ${
+                activeTab === "skills" ? "active" : "text-dark"
+              }`}
               onClick={() => setActiveTab("skills")}
               style={{
-                backgroundColor: activeTab === "skills" ? "red" : "transparent",
+                backgroundColor:
+                  activeTab === "skills" ? "#ff6f61" : "transparent",
                 color: activeTab === "skills" ? "#fff" : "#000",
               }}
             >
-             <i className="fas fa-brain"></i> Skills
-            </a>
+              <i className="fa-solid fa-blog"></i> Skills
+            </button>
           </li>
-          <li>
-            <a
-              href="#blogs"
-              className={`nav-link ${activeTab === "blogs" ? "active" : "text-dark"}`}
+          <li style={{padding: activeTab==="blogs"?"10px":"0px"}}>
+            <button
+              className={`nav-link w-100 text-start btn ${
+                activeTab === "blogs" ? "active" : "text-dark"
+              }`}
               onClick={() => setActiveTab("blogs")}
               style={{
-                backgroundColor: activeTab === "blogs" ? "red" : "transparent",
+                backgroundColor:
+                  activeTab === "blogs" ? "#ff6f61" : "transparent",
                 color: activeTab === "blogs" ? "#fff" : "#000",
               }}
             >
-              <i class="fa-solid fa-blog"></i> Blogs
-            </a>
+              <i className="fa-solid fa-blog"></i> Blogs
+            </button>
           </li>
-          <li>
-            <a
-              href="#settings"
-              className={`nav-link ${activeTab === "settings" ? "active" : "text-dark"}`}
+          <li style={{padding: activeTab==="settings"?"10px":"0px"}}>
+            <button
+              className={`nav-link w-100 text-start btn ${
+                activeTab === "settings" ? "active" : "text-dark"
+              }`}
               onClick={() => setActiveTab("settings")}
               style={{
-                backgroundColor: activeTab === "settings" ? "red" : "transparent",
+                backgroundColor:
+                  activeTab === "settings" ? "#ff6f61" : "transparent",
                 color: activeTab === "settings" ? "#fff" : "#000",
               }}
             >
-              <i className="fas fa-cog me-2"></i> Settings
-            </a>
+              <i className="fa-solid fa-blog"></i> Settings
+            </button>
           </li>
         </ul>
         <hr />

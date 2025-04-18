@@ -68,7 +68,7 @@ const TestimonialCarousel = ({fontsColor}) => {
     <div className="container mt-5 text-center">
       <h1 className="" style={{
         fontSize:'28px',
-        color: fontsColor.red,
+        color: fontsColor.lightPeach,
       }}>What Clients Say</h1>
       <div className="row d-flex justify-content-center">
         <div className="carousel-container">
@@ -88,7 +88,7 @@ const TestimonialCarousel = ({fontsColor}) => {
                 <img src={images.TestimonialProfile} alt={testimonial.name} className="rounded-circle me-2 align-self-start" style={{ width: "40px", height: "40px",border: `2px solid ${fontsColor.red}` }} />
                 <div>
                   <p className="mb-0" style={{ fontSize: "14px",textAlign:'left' }}>{testimonial.name}</p>
-                  <small className="" style={{ fontSize: "12px",textAlign:'left',color: fontsColor.red }}>{testimonial.role}</small>
+                  <small className="" style={{ fontSize: "12px",textAlign:'left',color: fontsColor.lightPeach }}>{testimonial.role}</small>
                 </div>
               </div>
             </div>

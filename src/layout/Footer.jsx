@@ -1,8 +1,6 @@
 import React from 'react';
 import { MDBFooter, MDBContainer, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
-import { FaLinkedin,FaFacebook, FaInstagram, FaGithub } from 'react-icons/fa';
-import { FaTwitter } from 'react-icons/fa6';
-import { fontsColor } from '../assets/fonts/colors';
+
 import '../styles/footer.css'
 export default function App() {
   return (
@@ -13,23 +11,22 @@ export default function App() {
           <span>Get connected with us on social networks:</span>
         </div>
 
-        <div>
-          <a href='' className='me-4 text-reset'>
-            <FaFacebook style={{color:fontsColor.red,fontSize:'25px'}} />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <FaTwitter style={{color:fontsColor.red,fontSize:'25px'}} />
-          </a>
-          
-          <a href='' className='me-4 text-reset'>
-            <FaInstagram style={{color:fontsColor.red,fontSize:'25px'}} />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <FaLinkedin style={{color:fontsColor.red,fontSize:'25px'}} />
-          </a>
-          <a href='' className='me-4 text-reset'>
-            <FaGithub style={{color:fontsColor.red,fontSize:'25px'}}/>
-          </a>
+        <div className='footer-social-links'>
+        <a href="https://github.com/Naeem2664">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/muhammad-naeem-1b2b33219">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://medium.com/@faltooswag">
+                  <i class="fa-brands fa-medium"></i>
+                </a>
+                <a href="https://stackoverflow.com/users/22205484/muhammad-naeem">
+                <i class="fa-brands fa-stack-overflow"></i>
+                </a>
+                <a href="https://www.facebook.com/naeem.mohammad.7146">
+                  <i class="fa-brands fa-facebook-f"></i>
+                </a>
         </div>
       </section>
 

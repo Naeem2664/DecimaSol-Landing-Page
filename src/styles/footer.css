@@ -4,3 +4,18 @@
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
 }
+.footer-social-links a{
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+    margin: 10px;
+    font-weight: bold;
+}
+.footer-social-links a:hover{
+  transition: all 0.2s ease;
+    color: #ff6f74;
+}

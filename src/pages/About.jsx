@@ -34,6 +34,7 @@ const About = () => {
            <ProfileCard/>
           </div>
           <div className="col-lg-8  ps-auto pl-5">
+            <div className="content">
             <h3 className="fw-light">Muhammad Naeem</h3>
             <h5 className="fg-theme mb-3">
               Software Engineer | MERN Stack Developer
@@ -62,6 +63,7 @@ const About = () => {
               </div>
             </div>
             <button>Download CV</button>
+            </div>
           </div>
         </div>
       </div>
