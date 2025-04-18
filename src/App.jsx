@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Page from "./container/Page";
 import Login from "./auth/Login";
 import Dashboard from "./admin/container/Dashboard";
@@ -8,8 +8,8 @@ import Add_blog_Page from "./admin/pages/Add_blog_Page";
 
 const App = () => {
   return (
-    <BrowserRouter basename="/DecimaSol-Landing-Page">
-      <Routes>
+    <Router>
+        <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/" index element={<Page />} />
         <Route
@@ -29,7 +29,9 @@ const App = () => {
           }
         />
       </Routes>
-    </BrowserRouter>
+
+    </Router>
+    
   );
 };
 
