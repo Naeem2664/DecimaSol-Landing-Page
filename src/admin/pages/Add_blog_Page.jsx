@@ -64,7 +64,7 @@ const Add_blog_Page = () => {
       <div className="row">
         <div className="col">
           <Editor
-            apiKey="yme3pgqiulbjgnfl9qm9uuzy7dqmh2694jly0hojojrru6ru"
+            apiKey="2nujgrt96l1jy6su03kjrs5xmc2pi8gasww1onyizoo5fexv"
             onInit={(evt, editor) => (editorRef.current = editor)}
             initialValue="<p>Write your blog here...</p>"
             init={{
