@@ -1,0 +1,109 @@
+.education-container{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: #f57070;
+    width: 100vw;
+    font-family: 'Quicksand', sans-serif;
+    height: 600px;
+}
+.edu-title{
+    color: #ffffff;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+.edu-details{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    max-height:500px ;
+}
+
+.edu-details .edu-detail{
+    width: 50%;
+    display: inline;
+    margin: 0px 10px 0px 40px;
+    padding: 10px 50px 10px 0px;
+}
+.edu-details .img{
+    display: inline;
+    max-width: 40%;
+    background-color: #ffffff;
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+    padding: 10px 0px 10px 30px;
+}
+.edu-details img{
+    max-width: 550px;
+    max-height: 350px;
+
+}
+.field{
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 5px 0px;
+    color: #ffffff;
+}
+.uni{
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #001f3f;
+}
+.year{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #001f3f;
+    display: block;
+}
+
+@media  screen and (max-width: 770px) {
+    .education-container{
+        background-color: #ffffff;
+        width: 100vw;
+        height: 700px;
+        padding: 0px;
+        font-family: 'Quicksand', sans-serif;
+    }
+    .edu-title{
+        color: #f57070;
+        font-size: 20px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+    .edu-details{
+        width: 100%;
+        align-items: center;
+        padding: 20px;
+    }
+    .edu-details .edu-detail{
+        display: block;
+        width: 100%;
+        margin: 0px;
+        padding: 20px;
+        text-align: center;
+        color: #f57070;
+    }
+    .edu-details .img{
+        display: block;
+        max-width: 400px;
+        padding: 20px auto;
+        clip-path: none;
+    }
+    .img img{
+        width: 350px;
+    }
+    .field{
+        font-size: 30px;
+        font-weight: 700;
+        margin: 5px 0px;
+        color: #ff6f6f;
+    }
+    .uni{
+        font-size: 1rem;
+        margin-bottom: 30px;
+        color: #001f3f;
+    }
+    
+}

@@ -1,15 +1,13 @@
 .contact{
     font-family: 'Quicksand', sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 60px 0;
     width: 100vw;
-    margin-top: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #ffffff;
-    height: 800px;
 }
 .contact input{
     width: 100%;

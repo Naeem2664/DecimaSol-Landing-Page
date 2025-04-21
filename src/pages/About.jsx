@@ -2,6 +2,8 @@ import React from "react";
 import "../styles/about.css";
 import ProfileCard from "../components/ProfileCard";
 import Skill from '../components/Skill'
+import Education from "../components/Education";
+import { fontsColor } from "../assets/fonts/colors";
 const About = () => {
   const skillsData = [
     { name: 'JavaScript', level: 80 },
@@ -35,7 +37,7 @@ const About = () => {
           </div>
           <div className="col-lg-8  ps-auto pl-5">
             <div className="content">
-            <h3 className="fw-light">Muhammad Naeem</h3>
+            <h3 className="fw-light" style={{color:fontsColor.darkBlue}}>Muhammad Naeem</h3>
             <h5 className="fg-theme mb-3">
               Software Engineer | MERN Stack Developer
             </h5>
@@ -47,19 +49,19 @@ const About = () => {
             <div class="info-container">
               <div class="info-item">
                 <div class="bullet"></div>
-                <span>From: Sadiqabad, Pakistan</span>
+                <span style={{color:fontsColor.darkBlue}}>From: Sadiqabad, Pakistan</span>
               </div>
               <div class="info-item">
                 <div class="bullet"></div>
-                <span>Lives In: Islamabad, Pakistan</span>
+                <span style={{color:fontsColor.darkBlue}}>Lives In: Islamabad, Pakistan</span>
               </div>
               <div class="info-item">
                 <div class="bullet"></div>
-                <span>Age: 25</span>
+                <span style={{color:fontsColor.darkBlue}}>Age: 25</span>
               </div>
               <div class="info-item">
                 <div class="bullet"></div>
-                <span>Gender: Male</span>
+                <span style={{color:fontsColor.darkBlue}}>Gender: Male</span>
               </div>
             </div>
             <button>Download CV</button>
@@ -84,10 +86,10 @@ const About = () => {
           ))}
         </div>
       </div>
-        
       </div>
+    </div>    
     </div>
-    </div>
+    <Education/>
      
     </>
   );

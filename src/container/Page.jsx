@@ -2,38 +2,44 @@ import React, { useState, useEffect, useRef } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Home from "../pages/Home";
 import About from "../pages/About";
+import Services from '../pages/Services'
 import Blogs from "../pages/Blog";
 import Testimonials from "../pages/Testimonials";
 import Contact from "../pages/Contact";
 import Footer from "../layout/Footer";
 import { Link } from "react-router-dom";
+import images from '../assets/images/images'
 import "../App.css";
+import Projects from "../pages/Projects";
 
 const Page = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 console.log('Active Section:', activeSection);
-  // Refs for each section
   const homeRef = useRef(null);
   const aboutRef = useRef(null);
   const blogRef = useRef(null);
+  const servicesRef = useRef(null);
+  const projectsRef=useRef(null)
   const testimonialsRef = useRef(null);
   const contactRef = useRef(null);
 
-  // Smooth scroll on click
   const scrollToSection = (sectionRef) => {
     sectionRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
-  // Detect scroll position
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + 200;
 
       if (scrollPosition < aboutRef.current?.offsetTop) {
         setActiveSection("home");
-      } else if (scrollPosition >= aboutRef.current?.offsetTop && scrollPosition < blogRef.current?.offsetTop) {
+      } else if (scrollPosition >= aboutRef.current?.offsetTop && scrollPosition < servicesRef.current?.offsetTop) {
         setActiveSection("about");
+      } else if(scrollPosition >= servicesRef.current?.offsetTop && scrollPosition < projectsRef.current?.offsetTop){
+        setActiveSection("services")
+      } else if(scrollPosition>=projectsRef.current?.offsetTop && scrollPosition < blogRef.current?.offsetTop){
+        setActiveSection('projects')
       } else if (scrollPosition >= blogRef.current?.offsetTop && scrollPosition < testimonialsRef.current?.offsetTop) {
         setActiveSection("blog");
       } else if (scrollPosition >= testimonialsRef.current?.offsetTop && scrollPosition < contactRef.current?.offsetTop) {
@@ -55,7 +61,7 @@ console.log('Active Section:', activeSection);
             <nav className="navbar navbar-expand-lg w-100 text-white h-100 nav">
               <div className="container navbar-container">
                 <a className="navbar-brand d-flex align-items-center" href="#home">
-                  <h4>Naeem</h4>
+                  <img className="logo" src={images.Logo} alt="logo" />
                 </a>
 
                 <button
@@ -73,6 +79,12 @@ console.log('Active Section:', activeSection);
                     </li>
                     <li className={`nav-item ${activeSection === "about" ? "active-nav" : ""}`}>
                       <button className="nav-link" onClick={() => scrollToSection(aboutRef)}>About</button>
+                    </li>
+                    <li className={`nav-item ${activeSection === "services" ? "active-nav" : ""}`}>
+                      <button className="nav-link" onClick={() => scrollToSection(servicesRef)}>Services</button>
+                    </li>
+                    <li className={`nav-item ${activeSection === "projects" ? "active-nav" : ""}`}>
+                      <button className="nav-link" onClick={() => scrollToSection(projectsRef)}>Projects</button>
                     </li>
                     <li className={`nav-item ${activeSection === "blog" ? "active-nav" : ""}`}>
                       <button className="nav-link" onClick={() => scrollToSection(blogRef)}>Blog</button>
@@ -93,8 +105,10 @@ console.log('Active Section:', activeSection);
       </div>
       <div ref={homeRef} id="home"><Home /></div>
       <div ref={aboutRef} id="about"><About /></div>
+      <div ref={servicesRef} id="services"><Services/></div>
+      <div ref={projectsRef} id="projects"><Projects/></div>
       <div ref={blogRef} id="blogs"><Blogs /></div>
-      <div ref={testimonialsRef} id="testimonials"><Testimonials /></div>
+      <div ref={testimonialsRef} id="testimonials"><Testimonials/></div>
       <div ref={contactRef} id="contact"><Contact /></div>
       <Footer />
     </div>

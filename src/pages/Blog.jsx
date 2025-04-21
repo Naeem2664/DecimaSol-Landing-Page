@@ -9,7 +9,7 @@ const Blog = () => {
   return (
     <>
     <div className="blogs">
-    <div className="container mt-4">
+    <div className="container">
         <div className="row">
           <div className="col">
             <h1

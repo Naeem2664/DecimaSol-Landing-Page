@@ -3,16 +3,14 @@
   margin-top: 50px;
   padding: 0;
   width: 100vw;
-  margin-top: 50px;
   background-color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 60px;
 
 }
-
 .blogs button {
   background-color: #ff6f61;
   text-align: center;

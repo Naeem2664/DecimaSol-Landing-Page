@@ -1,0 +1,43 @@
+.project-card{
+    position: relative;
+    max-width: 350px;
+    margin: 0;
+    padding: 0;
+    height: 300px;
+    background-color: aqua;
+    font-family: 'QuickSand', sans-serif;
+    box-shadow:  5px 5px 10px #8f8f8f,
+             -5px -5px 10px #ffffff;
+}
+.project-img{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.project-img img{
+    width: 350px;
+    height: 300px;
+}
+.project-details{
+    background-color: #ff6f61;
+    height: 100px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 70%;
+    padding: 8px 10px;
+}
+.project-details .name{
+    
+}
+.name h4{
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 700;
+}
+.project-details .desc{
+    color: #e3e3e3;
+    font-size: 14px;
+    font-weight: 800;
+}

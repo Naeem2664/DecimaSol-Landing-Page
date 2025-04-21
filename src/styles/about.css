@@ -73,6 +73,12 @@
 .about button:hover{
   background-color: rgb(255, 151, 151);
 }
+.edu{
+  background-color: #ff6f61;
+  color: aliceblue;
+  margin: 0;
+  padding: 0;
+}
  @media  screen and (max-width:700px){
   .about{
     height: 100%;

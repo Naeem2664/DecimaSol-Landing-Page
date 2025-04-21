@@ -1,10 +1,11 @@
 import React from "react";
 import '../styles/skillbar.css'
+import { fontsColor } from "../assets/fonts/colors";
 const Skill = ({name,level}) => {
   return (
     <>
        <div className="skill-container">
-      <div className="skill-label">{name}</div>
+      <div className="skill-label" style={{color:fontsColor.darkBlue}}>{name}</div>
       <div className="progress-bar">
         <div className="progress-fill" style={{ width: `${level}%` }}>
           {level}%

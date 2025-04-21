@@ -3,7 +3,9 @@ const fontsColor = {
   black:'#1A1919',
   offWhite:'#E5E5E5',
   white:'#FFFFFF',
-  lightPeach:'#ff6f61'
+  lightPeach:'#ff6f61',
+  darkBlue:'#001f3f'
+
 }
 const bgColor = {
   black: '#1A1919',
